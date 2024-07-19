@@ -27,6 +27,8 @@ setup(
         "PyMuPDF>=1.24.7",
         "camelot-py[cv]>=0.9.0",
         "openpyxl>=3.1.5",
+        "inspect_ai>=0.3.17",
+        "openai>=1.35.10"
     ],
     extras_require={
         "dev": ["pytest>=8.2.2", "pytest-mock>=3.12.0"],

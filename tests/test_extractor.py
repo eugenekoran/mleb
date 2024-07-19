@@ -160,7 +160,7 @@ def test_subject_to_inspect_dataset(sample_subject, temp_output_file, mocker):
     mock_open = mocker.patch('builtins.open', mocker.mock_open())
     mock_json_dump = mocker.patch('json.dump')
 
-    sample_subject.to_inspect_dataset(temp_output_file)
+    sample_subject.to_inspect_dataset(temp_output_file, canary="uuid")
 
     mock_open.assert_called_once_with(temp_output_file, 'a+', encoding='utf-8')
     assert mock_json_dump.call_count == 2  # Called for each question
