@@ -1,4 +1,5 @@
 import pytest
+
 from mleb.dataset import MLEBDataset
 from mleb.extractor import Subject
 
@@ -13,7 +14,7 @@ def test_mleb_dataset_add_subject(sample_dataset, mocker):
     mock_subject.extract.return_value = mock_subject
     mock_subject.to_inspect_dataset.return_value = None
 
-    mocker.patch('mleb.dataset.Subject', return_value=mock_subject)
+    mocker.patch("mleb.dataset.Subject", return_value=mock_subject)
 
     sample_dataset.add_subject("phy", "2023")
 

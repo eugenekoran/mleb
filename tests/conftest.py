@@ -1,7 +1,9 @@
-import pytest
 from pathlib import Path
+
+import pytest
+
 from mleb.dataset import MLEBDataset
-from mleb.extractor import Subject, QuestionExtractor, AnswerExtactor, ImageExtractor, TableExtractor
+from mleb.extractor import AnswerExtactor, ImageExtractor, QuestionExtractor, Subject, TableExtractor
 
 
 @pytest.fixture
@@ -23,7 +25,7 @@ def sample_dataset(temp_output_file):
 def sample_pdf_path(tmp_path):
     pdf_path = tmp_path / "sample.pdf"
     # Create a dummy PDF file
-    pdf_path.write_bytes(b'%PDF-1.5\n%\xe2\xe3\xcf\xd3\n')
+    pdf_path.write_bytes(b"%PDF-1.5\n%\xe2\xe3\xcf\xd3\n")
     return pdf_path.as_posix()
 
 

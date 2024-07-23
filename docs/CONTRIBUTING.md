@@ -32,8 +32,14 @@ The more information you provide, the easier it will be to resolve the issue.
 
 ## Use a Consistent Coding Style
 
-* 4 spaces for indentation rather than tabs
-* You can try running `pylint` for style unification
+This project uses [Black](https://github.com/psf/black) for code formatting and [isort](https://pycqa.github.io/isort/) for import sorting.
+
+Before submitting a pull request, please run:
+
+```bash
+black .
+isort .
+```
 
 ## License
 

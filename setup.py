@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -28,9 +28,9 @@ setup(
         "camelot-py[cv]>=0.9.0",
         "openpyxl>=3.1.5",
         "inspect_ai>=0.3.17",
-        "openai>=1.35.10"
+        "openai>=1.35.10",
     ],
     extras_require={
-        "dev": ["pytest>=8.2.2", "pytest-mock>=3.12.0"],
+        "dev": ["pytest>=8.2.2", "pytest-mock>=3.12.0", "black>=24.4.2", "isort>=5.13.2"],
     },
 )
